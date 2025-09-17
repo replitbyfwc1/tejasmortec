@@ -1,0 +1,35 @@
+// JavaScript Document
+$(document).ready( function(e){$('#header').load('header.html?v=7', function(data){$(this).html(data);}); });
+$(document).ready( function(e){$('#header2').load('header2.html', function(data){$(this).html(data);}); });
+$(document).ready( function(e){$('#footer').load('footer.html?v=6', function(data){$(this).html(data);}); });
+
+/*************************CLICKS EN FOTOS***************/	
+function visualizarFoto(indice, categoriaId) {
+
+	var categoria="";
+		if(categoriaId==1){categoria="imagenes/arquitectonica/"}
+    if(categoriaId==2){categoria="imagenes/fibra/"}
+    if(categoriaId==3){categoria="imagenes/policarbonato/"}
+    if(categoriaId==4){categoria="imagenes/caballetes/"}
+    if(categoriaId==5){categoria="imagenes/piso/"}
+    if(categoriaId==6){categoria="imagenes/tornilleria/"}
+    if(categoriaId==7){categoria="imagenes/perfileria/"}
+    if(categoriaId==8){categoria="imagenes/polipropileno/"}
+    if(categoriaId==9){categoria="imagenes/upvc/"}
+    if(categoriaId==10){categoria="imagenes/metal/"}
+    if(categoriaId==11){categoria="imagenes/upvc2/"}
+     if(categoriaId==12){categoria="imagenes/canales/"}
+								
+	var ruta = document.getElementById(indice).value;
+	document.getElementById("fotoModal").src=categoria+ruta;
+
+}
+
+
+
+    // Añade la clase "loaded" al body cuando el DOM está completamente cargado
+    document.addEventListener('DOMContentLoaded', function () {
+      document.body.classList.add('loaded');
+    });
+
+
